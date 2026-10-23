@@ -76,3 +76,5 @@
 .case-study .case-end{margin-top:32px}.case-study .case-end p{font:700 25px Arial,sans-serif}
 @media(max-width:800px){.case-study [class$='-scan-list']{grid-template-columns:1fr 1fr}.case-study [class$='-facts']{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.card-home .hero{grid-template-columns:1fr;gap:12px}.card-home h1{font-size:clamp(54px,12vw,80px)}.card-home .hero-art img{max-height:330px}.card-home .section-heading h2{font-size:36px}.card-home .studio h2,.card-home .contact h2{font-size:38px}.case-study [class$='-section']{padding:22px 18px}.case-study [class$='-facts'],.case-study [class$='-scan-list'],.case-study .eye-build-story,.case-study .aria-story,.case-study .oracle-build-list,.case-study .oracle-double-reading{grid-template-columns:1fr}.case-study [class$='-fact']{padding:16px}.case-study h2{font-size:28px}}
+/* Case-study sections stay open; only the individual content items are cards. */
+.case-study [class$='-section']{padding:28px 0;border:0;border-radius:0;background:transparent}
