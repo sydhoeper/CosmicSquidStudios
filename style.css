@@ -90,3 +90,11 @@ h1 em,h2 em{color:var(--paper)}
 .card-home .project:hover .project-image>img{transform:none}
 .disciplines span{background:#222;border-color:transparent;border-radius:6px;color:var(--muted)}
 .case-study [class$='-fact'],.case-study [class$='-card'],.case-study [class$='-scan-row'],.case-study .eye-build-story li,.case-study .aria-story li,.case-study .oracle-build-list li{border-color:#353535;border-radius:12px}
+/* Never draw a card around another card, including diagram and reading groups. */
+.case-study :is(section,article,div,aside,ol,ul):has(:is([class$='-card'],[class$='-fact'],[class$='-scan-row'],.oracle-reading,.chamber-foyer,.chamber-door,.chamber-pipeline-step,.eye-build-story li,.aria-story li,.oracle-build-list li)){
+  background:transparent;border:0;border-radius:0;box-shadow:none;
+}
+.case-study :is(.chamber-map,.chamber-pipeline,.oracle-double-reading,.oracle-continuity){padding:0}
+/* Static labels stay neutral, even when older component rules are present. */
+.case-study :is([class$='-label'],[class$='-eyebrow'],[class$='-build-focus'],[class$='-pipeline-arrow']){color:var(--muted)}
+.case-study :is(a[href],button:not(:disabled)):focus-visible{outline:3px solid var(--acid);outline-offset:4px}
