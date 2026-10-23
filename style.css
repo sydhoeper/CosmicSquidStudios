@@ -107,3 +107,36 @@ h1 em,h2 em{color:var(--paper)}
 .case-study .oracle-links{display:flex;flex-wrap:wrap;gap:20px 36px;margin-top:20px}
 .case-study .oracle-links a{display:flex;align-items:center;gap:16px;color:var(--acid)}
 .case-study .oracle-link-kicker{display:block;font-size:.75rem;margin-bottom:5px}
+
+/* More space around concise copy, with cards reserved for individual items. */
+.card-home .hero{padding-top:36px;padding-bottom:56px;gap:64px}
+.card-home .intro{margin:28px 0 36px;line-height:1.65}
+.card-home .section{padding-top:88px}
+.card-home .section-heading{margin-bottom:40px}
+.card-home .projects{gap:32px}
+.card-home .project{padding:18px 18px 30px}
+.card-home .project h3{margin-bottom:16px}
+.card-home .project p{margin-top:0;margin-bottom:30px;line-height:1.6}
+.card-home .studio-contact-grid{margin-top:100px;padding-top:72px;padding-bottom:40px}
+.card-home .studio,.card-home .contact{padding-top:0}
+.card-home .disciplines{gap:12px;margin-top:28px}
+.case-study>article{gap:48px}
+.case-study [class$='-section']{padding:36px 0}
+.case-study [class$='-lede']{margin-top:24px;margin-bottom:40px;max-width:680px}
+.case-study h2{margin-bottom:24px}
+.case-study h3{margin-bottom:14px}
+.case-study [class$='-facts']{gap:20px;margin:36px 0 44px}
+.case-study [class$='-card-grid'],.case-study [class$='-brief-grid'],.case-study [class$='-scan-list'],.case-study .eye-build-story,.case-study .aria-story,.case-study .oracle-build-list{gap:24px;margin-top:32px}
+.case-study [class$='-card'],.case-study [class$='-scan-row'],.case-study .eye-build-story li,.case-study .aria-story li,.case-study .oracle-build-list li{padding:28px}
+.case-study p{line-height:1.7}
+.case-study .oracle-continuity{margin-top:40px}
+.case-study .oracle-presentation-gallery{gap:24px;margin:32px 0}
+.case-study .case-end{margin-top:64px}
+@media(max-width:700px){
+ .card-home .hero{padding-top:24px;padding-bottom:32px;gap:32px}
+ .card-home .section{padding-top:64px}.card-home .section-heading{margin-bottom:28px}
+ .card-home .projects{gap:28px}.card-home .studio-contact-grid{margin-top:72px;padding-top:48px;gap:56px}
+ .card-home .studio,.card-home .contact{padding-top:0}
+ .case-study>article{gap:28px}.case-study [class$='-section']{padding:24px 0}
+ .case-study [class$='-card'],.case-study [class$='-scan-row'],.case-study .eye-build-story li,.case-study .aria-story li,.case-study .oracle-build-list li{padding:24px}
+}
