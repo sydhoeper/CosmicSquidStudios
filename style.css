@@ -98,3 +98,12 @@ h1 em,h2 em{color:var(--paper)}
 /* Static labels stay neutral, even when older component rules are present. */
 .case-study :is([class$='-label'],[class$='-eyebrow'],[class$='-build-focus'],[class$='-pipeline-arrow']){color:var(--muted)}
 .case-study :is(a[href],button:not(:disabled)):focus-visible{outline:3px solid var(--acid);outline-offset:4px}
+/* Exhibition images fill their own columns, rather than 30% of each figure. */
+.case-study .oracle-presentation-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;overflow:visible;align-items:start}
+.case-study .oracle-presentation-gallery figure{min-width:0;margin:0}
+.case-study .oracle-presentation-gallery img{display:block;width:100%;height:auto;max-height:none;border-radius:10px;object-fit:contain}
+.card-home .projects .project{grid-column:span 3}
+@media(max-width:700px){.case-study .oracle-presentation-gallery{grid-template-columns:1fr;gap:20px}.card-home .projects .project{grid-column:1}}
+.case-study .oracle-links{display:flex;flex-wrap:wrap;gap:20px 36px;margin-top:20px}
+.case-study .oracle-links a{display:flex;align-items:center;gap:16px;color:var(--acid)}
+.case-study .oracle-link-kicker{display:block;font-size:.75rem;margin-bottom:5px}
