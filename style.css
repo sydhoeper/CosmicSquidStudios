@@ -28,3 +28,12 @@
 .card-home .contact-bottom{display:block;margin-top:auto;padding-top:30px}.card-home .contact-bottom .button{margin-top:24px}.card-home .email{margin-top:20px}
 @media(max-width:950px){.card-home .project,.card-home .project:nth-child(-n+2){grid-column:span 3}.card-home .project:last-child{grid-column:span 6}.card-home .project-image>img,.card-home .project:nth-child(-n+2) .project-image>img{height:260px}.card-home .studio-contact-grid{grid-template-columns:1fr}}
 @media(max-width:700px){.card-home main{padding:18px 5% 40px}.card-home .hero{grid-template-columns:1fr;gap:16px}.card-home .hero-copy{padding:30px 24px}.card-home h1{font-size:clamp(43px,10.8vw,70px)}.card-home .hero-art{padding:18px}.card-home .hero-art img{max-height:370px;object-fit:contain}.card-home .section{padding-top:42px}.card-home .projects{grid-template-columns:1fr;gap:18px}.card-home .project,.card-home .project:nth-child(-n+2),.card-home .project:last-child{grid-column:auto}.card-home .studio-contact-grid{margin-top:42px;gap:18px}.card-home .studio,.card-home .contact{padding:28px 24px}.card-home .section-heading>p{margin-top:20px}.card-home .contact-bottom{padding-top:24px}.card-home .project-meta{letter-spacing:1px}}
+/* Let the introduction and studio content breathe; cards belong to the work. */
+.card-home .hero{gap:36px}
+.card-home .hero-copy,.card-home .hero-art{border:0;border-radius:0;background:transparent}
+.card-home .hero-copy{padding:36px 0}
+.card-home .hero-art{padding:10px 0}
+.card-home .hero-art img{border-radius:0}
+.card-home .studio-contact-grid{gap:60px;padding-top:48px;border-top:1px solid var(--line)}
+.card-home .studio,.card-home .contact{padding:0;border:0;border-radius:0;background:transparent}
+@media(max-width:700px){.card-home .hero{gap:12px}.card-home .hero-copy{padding:24px 0}.card-home .hero-art{padding:0}.card-home .studio-contact-grid{padding-top:36px;gap:44px}}
