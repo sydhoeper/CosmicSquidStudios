@@ -140,3 +140,6 @@ h1 em,h2 em{color:var(--paper)}
  .case-study>article{gap:28px}.case-study [class$='-section']{padding:24px 0}
  .case-study [class$='-card'],.case-study [class$='-scan-row'],.case-study .eye-build-story li,.case-study .aria-story li,.case-study .oracle-build-list li{padding:24px}
 }
+/* Keep the production section copy white, including supporting labels. */
+.case-study [aria-labelledby='eye-process-heading'],
+.case-study [aria-labelledby='eye-process-heading'] :is(h2,h3,p,span,strong,.eye-build-focus){color:#fff}
