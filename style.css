@@ -143,3 +143,8 @@ h1 em,h2 em{color:var(--paper)}
 /* Keep the production section copy white, including supporting labels. */
 .case-study [aria-labelledby='eye-process-heading'],
 .case-study [aria-labelledby='eye-process-heading'] :is(h2,h3,p,span,strong,.eye-build-focus){color:#fff}
+
+/* Learning, training, and exploration positioning. */
+.card-home h1{font-size:clamp(54px,7.1vw,102px)}
+.service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}.service-grid article{border-top:1px solid var(--line);padding-top:24px}.service-grid h3{font-size:24px;line-height:1.2;letter-spacing:-.5px}.service-grid p,.service-note,.contact-intro{color:var(--muted);font-size:16px}.service-note{margin:28px 0 0;font-size:14px}.contact-intro{margin-top:24px}.card-home .project-image>img{object-fit:cover}.card-home .project:nth-child(2) .project-image>img{object-fit:cover}
+@media(max-width:700px){.service-grid{grid-template-columns:1fr;gap:24px}.site-header{flex-wrap:wrap}nav{flex-wrap:wrap;gap:18px}.card-home h1{font-size:clamp(50px,12vw,80px)}}
