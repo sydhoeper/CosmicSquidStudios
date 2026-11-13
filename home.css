@@ -240,3 +240,16 @@ body.motion-home .process-intro h3{max-width:800px}
 
 /* Preserve the complete transparent squid and moon artwork. */
 .brand img{border-radius:0;object-fit:contain;background:transparent}
+
+/* Keep the service overview in the site's dark visual language. */
+.xr-uses{background:transparent;color:var(--text);padding:48px 0 0;border-radius:0;border-top:1px solid var(--line);gap:8%;margin-bottom:130px}
+.xr-intro .eyebrow{color:var(--muted)}
+.xr-intro h2{margin-bottom:0}
+.xr-use-list article{border-color:var(--line)}
+.xr-use-list p{color:var(--muted);margin-bottom:0}
+.use-number{color:var(--accent)}
+.about-body #services{padding-left:0}
+.about-body #services p{font-size:var(--type-body);color:var(--muted);line-height:1.7;margin:0 0 24px}
+.about-contact{display:inline-flex;align-items:center;gap:24px;min-height:44px;color:var(--accent);text-decoration:underline;text-underline-offset:5px;font-size:var(--type-body)}
+@media(max-width:1000px){.xr-uses{padding:40px 0 0;gap:44px}}
+@media(max-width:700px){.xr-uses{padding:32px 0 0;margin-bottom:90px}.about-body{grid-template-columns:minmax(0,1fr)}}
