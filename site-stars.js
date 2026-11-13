@@ -32,12 +32,15 @@
   try { disabled = disabled || localStorage.getItem('reduce-motion') === 'true'; } catch {}
   function sync(){
     document.body.classList.toggle('motion-off', disabled);
-    toggle.textContent = disabled ? 'Animations: off' : 'Animations: on';
-    toggle.setAttribute('aria-pressed', String(!disabled));
+    const effectiveOff = disabled || preference.matches;
+    document.body.classList.toggle('motion-off', effectiveOff);
+    toggle.textContent = effectiveOff ? 'Animations: off' : 'Animations: on';
+    toggle.setAttribute('aria-label', 'Animations');
+    toggle.setAttribute('aria-pressed', String(!effectiveOff));
     if (disabled) starLayers.forEach(layer => layer.element.style.transform = 'none');
   }
   toggle.addEventListener('click', () => {
-    disabled = !disabled; sync();
+    disabled = preference.matches ? true : !disabled; sync();
     try { localStorage.setItem('reduce-motion', String(disabled)); } catch {}
   });
   (document.querySelector('footer') || document.querySelector('main')).append(toggle); sync();

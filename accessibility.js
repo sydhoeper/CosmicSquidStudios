@@ -14,11 +14,16 @@
     field.after(error);
     field.setAttribute('aria-describedby', [field.getAttribute('aria-describedby'),error.id].filter(Boolean).join(' '));
     field.addEventListener('input', () => {
-      if (field.validity.valid) { field.removeAttribute('aria-invalid'); error.hidden = true; }
+      if (field.validity.valid) {
+        field.removeAttribute('aria-invalid'); error.hidden = true;
+        summary.querySelector(`a[href="#${field.id}"]`)?.closest('li')?.remove();
+        if (!summary.querySelector('li')) summary.hidden = true;
+      }
     });
   });
   form.noValidate = true;
   form.addEventListener('submit', event => {
+    required.filter(field => field.validity.valid).forEach(field => { field.removeAttribute('aria-invalid'); document.getElementById(`${field.id}-error`).hidden = true; });
     const invalid = required.filter(field => !field.validity.valid);
     if (!invalid.length) { summary.hidden = true; return; }
     event.preventDefault();

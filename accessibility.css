@@ -42,3 +42,5 @@ html:has(body.motion-off){scroll-behavior:auto!important}
  button,input,textarea,.project-number{border:1px solid ButtonText}
  .step-visual svg{stroke:CanvasText}
 }
+
+[hidden]{display:none!important}.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip-path:inset(50%);white-space:nowrap!important;border:0!important}.error-summary:focus{outline:3px solid #fff;outline-offset:4px}

@@ -1,0 +1,46 @@
+/* Shared brand tokens and navigation across every content page. */
+:root{--ink:#101211;--paper:#f0f1e9;--acid:#00cfff;--muted:#a3aaa4;--line:#343a35}
+body{font-family:"Avenir Next",Avenir,"Segoe UI",Arial,sans-serif;background:#101211;color:#f0f1e9}
+.site-header,.header{max-width:1600px;margin:auto;padding:24px 5%;min-height:120px;height:auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:32px;border-bottom:1px solid var(--line)}
+.site-header .brand,.header .brand{display:flex;align-items:center;gap:14px;font-size:18px;font-weight:500;line-height:1.2;letter-spacing:.04em;text-decoration:none}
+.site-header .brand img,.header .brand img{width:54px;height:54px;object-fit:contain;border-radius:0}
+.site-header .brand span span,.header .brand span span{display:block;font-size:12px;font-weight:500;line-height:1.4;letter-spacing:.25em;margin-top:6px;color:var(--muted)}
+.site-header nav,.header nav{display:flex;flex-wrap:wrap;align-items:center;gap:28px;font-size:18px;line-height:1.6;font-weight:500}
+.site-header nav a,.header nav a{display:inline-flex;align-items:center;min-height:48px;text-decoration:none}
+.site-header nav a:hover,.header nav a:hover{color:var(--acid)}
+.site-header .contact-link,.header .contact-link{border:1px solid var(--acid);border-radius:4px;padding:12px 22px;color:var(--acid)}
+.contact-link span{margin-left:24px;font-size:21px}
+nav a[aria-current=page]{text-decoration:underline;text-underline-offset:6px}
+footer{max-width:1600px;margin:auto;padding:32px 5% 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;border-top:1px solid var(--line);font-size:14px;line-height:1.5;color:var(--muted)}
+footer a{color:inherit;font-weight:400;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.case-study{font-size:18px}
+.case-study h1,.case-study h2,.case-study h3{font-family:inherit;font-weight:500;line-height:1.2}
+.case-study h1{font-size:clamp(36px,5.8vw,78px)}
+.case-study h2{font-size:32px}.case-study h3{font-size:24px}
+.case-study :is([class$='-eyebrow'],[class$='-label'],[class$='-build-focus']){font-size:14px;line-height:1.6;letter-spacing:.07em}
+.case-study [class$='-fact'] span,.oracle-game-controls p{font-size:16px}
+.case-study .back{font-size:18px}
+.case-study button{font-family:inherit}
+.emora-carousel-thumbnails button{border-color:#8d9890;font-size:16px}
+/* Keep focus outlines clear of media clipping and native playback controls. */
+.emora-carousel-arrow{position:static;flex:none}
+.emora-carousel-viewport{overflow:visible!important}
+.emora-carousel-controls{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.case-study .oracle-card-fan{flex-wrap:wrap;justify-content:center}
+.case-study .oracle-card-fan img{width:calc(20% - 12px)}
+@media(max-width:700px){
+ .site-header,.header{min-height:100px;gap:22px;padding-top:24px;padding-bottom:20px}
+ .site-header .brand,.header .brand{font-size:16px;gap:12px}
+ .site-header .brand img,.header .brand img{width:46px;height:46px}
+ .site-header nav,.header nav{width:100%;gap:12px 24px;font-size:18px;justify-content:flex-start}
+ .site-header .contact-link,.header .contact-link{margin-left:auto;padding:10px 16px}
+ .case-study .oracle-card-fan img{width:calc(33.333% - 12px)}
+ footer{flex-direction:column;align-items:flex-start;gap:14px}
+ footer span:nth-child(2){display:initial}
+}
+.case-study [class$='-card'] p{font-size:18px;line-height:1.7}
+.case-study .case-end p{font-family:inherit;font-size:24px;font-weight:500}
+.case-study .button{font-size:18px;font-weight:500;border-radius:4px}
+.case-study .oracle-link-kicker{font-size:14px}
+@media(forced-colors:active){.emora-carousel-thumbnails button{border-color:ButtonText}}
