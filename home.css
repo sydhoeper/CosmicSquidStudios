@@ -146,3 +146,46 @@ h1{font-size:var(--type-display);line-height:1.12;letter-spacing:-.045em;font-we
 @media(max-width:700px){.intake{padding:36px 0 0}.intake-form{grid-template-columns:1fr}.form-wide{grid-column:auto}.form-bottom{align-items:stretch;flex-direction:column;gap:24px}.form-bottom button{width:100%}}
 
 .intake-heading h1{font-size:var(--type-heading);font-weight:500;line-height:1.2;letter-spacing:-.035em;margin:0 0 24px}.direct-email a{color:var(--accent);text-decoration:underline;text-underline-offset:4px}.contact-person{font-size:var(--type-label);color:var(--muted)}.intake-heading{max-width:850px}.intake{margin-top:40px;border-top:0}.direct-email a{overflow-wrap:anywhere}
+
+/* A roomier, staggered rhythm for the homepage. */
+body.motion-home .hero{padding-top:130px;padding-bottom:150px}
+body.motion-home .process{padding-bottom:150px}
+body.motion-home .process-intro{padding-top:45px;padding-bottom:80px}
+body.motion-home .process-steps{gap:64px}
+body.motion-home .work>.section-label{margin-bottom:32px}
+body.motion-home .projects{column-gap:6%;row-gap:110px;align-items:start}
+body.motion-home .project:nth-child(even){margin-top:110px}
+body.motion-home .visual{aspect-ratio:1.25}
+body.motion-home .studio{padding-top:170px}
+body.motion-home .studio-body{padding-top:70px;padding-bottom:140px}
+body.motion-home .contact{padding:70px 64px 80px;margin-bottom:110px}
+body.motion-home .section-label{padding-top:36px;padding-bottom:36px}
+.motion-ready [data-reveal]{opacity:0;transform:translateY(44px);transition:opacity .8s ease,transform .95s cubic-bezier(.22,1,.36,1)}
+.motion-ready [data-reveal="heading"]{transform:translateX(-32px)}
+.motion-ready [data-reveal="project"]{transform:translateY(70px) rotate(1.5deg)}
+.motion-ready [data-reveal="project"]:nth-child(even){transform:translateY(70px) rotate(-1.5deg)}
+.motion-ready [data-reveal].is-visible{opacity:1;transform:none}
+body.motion-home .visual>img{scale:1.06;translate:0 var(--image-drift,0px);transition:translate .18s linear,transform .6s ease}
+body.motion-home .project-arrow{transition:transform .35s,background .2s}
+body.motion-home .project:hover .project-arrow{transform:rotate(45deg)}
+body.motion-home .process-steps li{transition-delay:var(--reveal-delay,0ms)}
+body.motion-home .contact>a>span{display:inline-block;transition:transform .4s cubic-bezier(.22,1,.36,1)}
+body.motion-home .contact>a:hover>span{transform:translate(10px,-10px)}
+@media(max-width:700px){
+ body.motion-home .hero{padding-top:88px;padding-bottom:105px}
+ body.motion-home .process{padding-bottom:100px}
+ body.motion-home .process-intro{padding-top:30px;padding-bottom:50px}
+ body.motion-home .process-steps{gap:44px}
+ body.motion-home .projects{gap:72px}
+ body.motion-home .project:nth-child(even){margin-top:0}
+ body.motion-home .visual{aspect-ratio:1.3}
+ body.motion-home .work>.section-label{margin-bottom:20px}
+ body.motion-home .studio{padding-top:110px}
+ body.motion-home .studio-body{padding-top:44px;padding-bottom:95px}
+ body.motion-home .contact{padding:44px 28px 50px;margin-bottom:75px}
+}
+@media(prefers-reduced-motion:reduce){
+ .motion-ready [data-reveal],.motion-ready [data-reveal="project"]:nth-child(even){opacity:1;transform:none;transition:none}
+ body.motion-home .visual>img{scale:1;translate:none}
+ body.motion-home .project:hover .project-arrow,body.motion-home .contact>a:hover>span{transform:none}
+}
