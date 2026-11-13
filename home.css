@@ -122,3 +122,5 @@ h1{font-size:var(--type-display);line-height:1.12;letter-spacing:-.045em;font-we
  footer{flex-direction:column;gap:14px}
  footer>a:last-child{margin-left:0}
 }
+
+.brand,.brand>span>span{font-weight:500}
