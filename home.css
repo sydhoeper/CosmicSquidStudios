@@ -204,3 +204,18 @@ body.motion-home .projects{grid-template-columns:repeat(2,minmax(0,1fr));gap:56p
 body.motion-home .project:nth-child(even){margin-top:0}
 body.motion-home .visual{aspect-ratio:1.48}
 @media(max-width:700px){body.motion-home .projects{grid-template-columns:minmax(0,1fr);gap:44px}body.motion-home .visual{aspect-ratio:1.48}}
+
+/* Contact page: introduction beside the inquiry form. */
+.contact.intake{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:72px;align-items:start;padding-top:64px}
+.intake .intake-heading{margin-bottom:0;max-width:460px}
+.intake .intake-form{gap:28px 24px}
+.intake>.error-summary{grid-column:2;grid-row:1}
+.intake:has(>.error-summary:not([hidden]))>.intake-form{grid-column:2}
+.intake:has(>.error-summary:not([hidden]))>.intake-heading{grid-column:1;grid-row:1 / 3}
+.intake>.error-summary[hidden]{display:none}
+.intake .form-bottom{align-items:flex-start;flex-direction:column;gap:24px}
+@media(max-width:950px){
+ .contact.intake{grid-template-columns:minmax(0,1fr);gap:40px;padding-top:36px}
+ .intake .intake-heading{max-width:720px}
+ .intake>.error-summary,.intake:has(>.error-summary:not([hidden]))>.intake-form,.intake:has(>.error-summary:not([hidden]))>.intake-heading{grid-column:auto;grid-row:auto}
+}
