@@ -294,6 +294,6 @@ body.motion-home .process-steps{grid-template-columns:repeat(4,minmax(0,1fr));ga
 @media(max-width:700px){body.motion-home .process-steps{grid-template-columns:minmax(0,1fr);gap:44px}}
 
 /* Clear, bold connectors between collaboration stages. */
-.process-steps li:not(:last-child)::after{content:'';width:30px;height:22px;top:76px;right:-31px;background:#f0f1e9;clip-path:polygon(0 36%,62% 36%,62% 0,100% 50%,62% 100%,62% 64%,0 64%)}
+.process-steps li:not(:last-child)::after{content:'';width:30px;height:30px;top:73px;right:-31px;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M5 16h21M18 7l9 9-9 9' fill='none' stroke='%23f0f1e9' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;clip-path:none}
 @media(min-width:701px) and (max-width:1100px){.process-steps li:not(:last-child)::after{right:-35px}.process-steps li:nth-child(2)::after{display:none}}
 @media(max-width:700px){.process-steps li:not(:last-child)::after{display:none}}
