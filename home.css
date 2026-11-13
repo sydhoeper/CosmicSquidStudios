@@ -189,3 +189,12 @@ body.motion-home .contact>a:hover>span{transform:translate(10px,-10px)}
  body.motion-home .visual>img{scale:1;translate:none}
  body.motion-home .project:hover .project-arrow,body.motion-home .contact>a:hover>span{transform:none}
 }
+
+/* Selected work: one vertical sequence on every screen. */
+body.motion-home .projects{grid-template-columns:minmax(0,1fr);gap:80px}
+body.motion-home .project:nth-child(even){margin-top:0}
+body.motion-home .visual{aspect-ratio:16 / 9}
+.motion-ready [data-reveal="project"],.motion-ready [data-reveal="project"]:nth-child(even){transform:translateY(44px)}
+.motion-ready [data-reveal="project"].is-visible{transform:none}
+@media(max-width:700px){body.motion-home .projects{gap:64px}body.motion-home .visual{aspect-ratio:1.3}}
+@media(prefers-reduced-motion:reduce){.motion-ready [data-reveal="project"],.motion-ready [data-reveal="project"]:nth-child(even){transform:none}}
