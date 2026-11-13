@@ -9,4 +9,15 @@ document.querySelectorAll('[data-carousel]').forEach(gallery=>{
  gallery.querySelector('[data-carousel-next]')?.addEventListener('click',()=>show(index+1));show(0);
 });
 const audioToggle=document.querySelector('[data-game-audio-toggle]');
-if(audioToggle){const frame=document.querySelector('[data-game-frame]');const message=document.querySelector('[data-game-stopped-message]');const url=frame.src;let playing=true;audioToggle.addEventListener('click',()=>{playing=!playing;frame.src=playing?url:'about:blank';frame.hidden=!playing;message.hidden=playing;audioToggle.textContent=playing?'Stop music':'Restart deck';});}
+if(audioToggle){
+ const frame=document.querySelector('[data-game-frame]');
+ const message=document.querySelector('[data-game-stopped-message]');
+ const url=frame.dataset.src;let playing=false;
+ audioToggle.addEventListener('click',()=>{
+  playing=!playing;
+  if(playing)frame.src=url;else frame.removeAttribute('src');
+  frame.hidden=!playing;message.hidden=playing;
+  message.textContent='The interactive deck is stopped.';
+  audioToggle.textContent=playing?'Stop interactive deck and music':'Load interactive deck';
+ });
+}

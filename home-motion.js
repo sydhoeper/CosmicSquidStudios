@@ -1,5 +1,19 @@
 (() => {
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const toggle = document.createElement('button');
+  toggle.type = 'button'; toggle.className = 'motion-toggle';
+  let disabled = preference.matches;
+  try { disabled = disabled || localStorage.getItem('reduce-motion') === 'true'; } catch {}
+  function sync(){
+    document.body.classList.toggle('motion-off', disabled);
+    toggle.textContent = disabled ? 'Animations: off' : 'Animations: on';
+    toggle.setAttribute('aria-pressed', String(!disabled));
+  }
+  toggle.addEventListener('click', () => {
+    disabled = !disabled; sync();
+    try { localStorage.setItem('reduce-motion', String(disabled)); } catch {}
+  });
+  document.querySelector('footer')?.append(toggle); sync();
   if (preference.matches || !('IntersectionObserver' in window)) return;
   const targets = [
     ...document.querySelectorAll('.process-intro, .process-steps li, .project, .studio-body, .contact, .section-label')
@@ -28,7 +42,7 @@
   let scheduled = false;
   function update() {
     scheduled = false;
-    if (preference.matches) return;
+    if (preference.matches || disabled) return;
     images.forEach(image => {
       const rect = image.parentElement.getBoundingClientRect();
       if (rect.bottom < 0 || rect.top > innerHeight) return;
