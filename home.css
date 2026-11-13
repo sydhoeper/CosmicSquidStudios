@@ -237,3 +237,6 @@ body.motion-home .process-intro h3{max-width:800px}
 .header nav{gap:28px}
 @media(max-width:1000px){.xr-uses{padding:40px;gap:40px;grid-template-columns:1fr}.xr-intro>p:not(.eyebrow){max-width:600px}.header nav{gap:20px}}
 @media(max-width:700px){.xr-uses{padding:32px 24px;margin-bottom:90px;gap:44px}.xr-intro h2{font-size:var(--type-heading)}.xr-use-list article{grid-template-columns:24px minmax(0,1fr);gap:16px;padding:28px 0}.header nav{flex-wrap:wrap;justify-content:flex-start;gap:12px 24px}.header .contact-link{margin-left:auto}}
+
+/* Preserve the complete transparent squid and moon artwork. */
+.brand img{border-radius:0;object-fit:contain;background:transparent}
