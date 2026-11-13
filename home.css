@@ -272,7 +272,7 @@ body.motion-home .work{padding-bottom:130px}.about-page{padding-top:72px}.about-
 .xr-inquiry{color:var(--accent)}
 .use-examples{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;gap:10px 20px}
 .use-examples li{font-size:var(--type-label);line-height:1.6;color:var(--text);display:flex;align-items:baseline;gap:8px}
-.use-examples li::before{content:'+';color:var(--accent);font-size:18px}
+.use-examples li::before{content:'•';color:var(--muted);font-size:14px}
 .xr-use-list article{padding-top:36px;padding-bottom:36px}
 .xr-use-list article:first-child{padding-top:0}
 .xr-use-list article:last-child{padding-bottom:0}
