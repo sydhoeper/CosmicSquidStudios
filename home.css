@@ -287,3 +287,5 @@ body.motion-off .star-layer{transform:none!important}
 .xr-use-list article{padding-top:36px;padding-bottom:36px}
 .xr-use-list article:first-child{padding-top:0}
 .xr-use-list article:last-child{padding-bottom:0}
+
+.about-page .about-with-logo{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:8%}.about-logo img{display:block;width:100%;max-width:540px;height:auto;margin:auto}.about-copy h2{font-size:var(--type-heading);font-weight:500;line-height:1.2;letter-spacing:-.035em;margin:0 0 32px}.about-copy h2 span{color:var(--accent)}@media(max-width:700px){.about-page .about-with-logo{grid-template-columns:minmax(0,1fr);gap:48px}.about-logo img{max-width:380px}}
