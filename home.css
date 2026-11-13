@@ -253,3 +253,5 @@ body.motion-home .process-intro h3{max-width:800px}
 .about-contact{display:inline-flex;align-items:center;gap:24px;min-height:44px;color:var(--accent);text-decoration:underline;text-underline-offset:5px;font-size:var(--type-body)}
 @media(max-width:1000px){.xr-uses{padding:40px 0 0;gap:44px}}
 @media(max-width:700px){.xr-uses{padding:32px 0 0;margin-bottom:90px}.about-body{grid-template-columns:minmax(0,1fr)}}
+
+body.motion-home .work{padding-bottom:130px}.about-page{padding-top:72px}.about-page .section-label{border-top:0;padding-top:0}.about-page .section-label h1{font-size:var(--type-heading);line-height:1.2;text-transform:none;letter-spacing:-.035em;margin:0}.about-page .studio-body{padding-top:48px;padding-bottom:100px}@media(max-width:700px){body.motion-home .work{padding-bottom:90px}.about-page{padding-top:48px}.about-page .studio-body{padding-bottom:72px}}
