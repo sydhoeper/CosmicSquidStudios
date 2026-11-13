@@ -124,3 +124,25 @@ h1{font-size:var(--type-display);line-height:1.12;letter-spacing:-.045em;font-we
 }
 
 .brand,.brand>span>span{font-weight:500}
+.intake{background:transparent;color:var(--text);border-top:1px solid var(--line);padding:48px 0 0}
+.intake-heading{max-width:720px;margin-bottom:40px}
+.intake-heading h2{font-size:var(--type-heading);font-weight:500;line-height:1.2;letter-spacing:-.035em;margin:0 0 20px}
+.intake-heading>p:last-child{color:var(--muted);font-size:var(--type-body)}
+.intake-form{display:grid;grid-template-columns:1fr 1fr;gap:28px 32px}
+.form-field{display:flex;flex-direction:column;gap:10px;min-width:0}
+.form-field label{font-size:var(--type-body)}
+.form-field label span,.field-hint{font-size:var(--type-label);color:var(--muted)}
+.intake-form input,.intake-form textarea{font:inherit;width:100%;color:var(--text);background:#191d1a;border:1px solid #58615a;border-radius:4px;padding:14px 16px}
+.intake-form textarea{resize:vertical;min-height:160px}
+.intake-form input::placeholder{color:var(--muted)}
+.intake-form input:focus-visible,.intake-form textarea:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.form-wide{grid-column:1 / -1}.field-hint{margin:0}
+.form-bottom{display:flex;align-items:center;justify-content:space-between;gap:32px;margin-top:8px}
+.form-bottom p{font-size:var(--type-label);color:var(--muted);max-width:490px;margin:0}
+.form-bottom p a{text-decoration:underline;text-underline-offset:3px}
+.form-bottom button{font:inherit;font-weight:500;border:0;border-radius:4px;background:var(--accent);color:var(--bg);padding:16px 24px;white-space:nowrap;cursor:pointer}
+.form-bottom button span{margin-left:22px}
+.form-bottom button:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+@media(max-width:700px){.intake{padding:36px 0 0}.intake-form{grid-template-columns:1fr}.form-wide{grid-column:auto}.form-bottom{align-items:stretch;flex-direction:column;gap:24px}.form-bottom button{width:100%}}
+
+.intake-heading h1{font-size:var(--type-heading);font-weight:500;line-height:1.2;letter-spacing:-.035em;margin:0 0 24px}.direct-email a{color:var(--accent);text-decoration:underline;text-underline-offset:4px}.contact-person{font-size:var(--type-label);color:var(--muted)}.intake-heading{max-width:850px}.intake{margin-top:40px;border-top:0}.direct-email a{overflow-wrap:anywhere}
