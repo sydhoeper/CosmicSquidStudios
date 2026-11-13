@@ -79,3 +79,46 @@ h1{margin-top:38px;margin-bottom:40px}
 .process-steps p{font-size:14px;align-self:start}
 .process-steps li:not(:last-child)::after{display:none}
 }
+
+/* Shared homepage typography: display, heading, title, body, label. */
+:root{
+ --type-display:clamp(30px,5.8vw,88px);
+ --type-heading:clamp(32px,3.6vw,52px);
+ --type-title:24px;
+ --type-body:18px;
+ --type-label:14px;
+}
+body{font-size:var(--type-body);line-height:1.6}
+h1{font-size:var(--type-display);line-height:1.12;letter-spacing:-.045em;font-weight:500}
+.eyebrow,.section-label,.tools,.project-number,.step-number,.step-visual>span,footer{font-size:var(--type-label);line-height:1.5}
+.eyebrow,.section-label{letter-spacing:.07em;font-weight:500}
+.section-label h2{font:inherit}
+.header nav,.header nav>a:nth-child(2),.round-link,.hero-bottom p,#services p,.process-intro>p,.process-steps p{font-size:var(--type-body);line-height:1.6}
+.header nav{font-weight:500}
+.process-intro h3,.studio-body>p{font-size:var(--type-heading);line-height:1.2;letter-spacing:-.035em;font-weight:500}
+.project-caption h3,.process-steps h4{font-size:var(--type-title);line-height:1.3;letter-spacing:-.02em;font-weight:500}
+.project-caption{align-items:flex-start;flex-direction:column;gap:8px}
+.project-caption>span{font-size:var(--type-label);line-height:1.5;text-align:left}
+.process-steps p{max-width:350px}
+.project-number{font-size:var(--type-label);padding:8px 12px;letter-spacing:.04em}
+.tools{display:block}
+.brand{font-size:18px;line-height:1.2}
+.brand>span>span{font-size:12px;line-height:1.4;letter-spacing:.25em}
+.contact>a{font-size:var(--type-display);line-height:1.2;font-weight:500;letter-spacing:-.045em}
+@media(max-width:700px){
+ :root{--type-display:clamp(36px,7.6vw,54px);--type-heading:32px;--type-title:22px;--type-body:18px;--type-label:14px}
+ .brand{font-size:16px}
+ .brand>span>span{font-size:12px}
+ .hero-bottom{align-items:flex-start;flex-direction:column;gap:28px}
+ .section-label{gap:18px;flex-wrap:wrap}
+ .section-label>span{max-width:100%}
+ .project-number{top:14px;left:14px;right:14px;width:fit-content;max-width:calc(100% - 28px);font-size:var(--type-label)}
+ .process-steps li{grid-template-columns:76px minmax(0,1fr);column-gap:20px}
+ .step-visual svg{width:76px}
+ .step-visual>span{left:30px}
+ .process-steps h4{font-size:var(--type-title)}
+ .process-steps p{font-size:var(--type-body)}
+ .contact>a{font-size:var(--type-heading)}
+ footer{flex-direction:column;gap:14px}
+ footer>a:last-child{margin-left:0}
+}
