@@ -1,0 +1,11 @@
+/* Decorative starfield: slow scroll-only motion, no flashing or input capture. */
+body.has-starfield{isolation:isolate;position:relative}
+.star-field{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;user-select:none}
+.star-layer{position:absolute;inset:0 0 -120px;pointer-events:none}
+.sky-star{position:absolute;background:#f0f1e9;border-radius:50%;pointer-events:none}
+.sky-star.sparkle{border-radius:0;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+body.motion-off .star-layer{transform:none!important}
+@media(max-width:700px){.sky-star{opacity:.28!important}.sky-star.sparkle{scale:.75}}
+@media(prefers-reduced-motion:reduce){.star-layer{transform:none!important}}
+@media(forced-colors:active),print{.star-field{display:none}}
+
